@@ -1,0 +1,98 @@
+https://code.visualstudio.com/ > install
+https://nodejs.org/en/ > install
+https://git-scm.com/downloads > Install
+https://www.postman.com/ > install
+https://github.com/ > Signup
+https://github.com/Aakashdeveloper > Follow
+
+Add To Chrome
+https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+
+
+// After installing Vs code add extension
+> eslint
+> gitlens
+> git History
+> vscode icons
+> tabnine
+> Code Spell Checker
+
+Npm
+React = 3
+Mock API
+json-server
+Github
+Deployment
+-> MERN
+-> heroku
+-> Netlify
+-> Aws
+-> Docker
+-> Nginx
+React-JWT(Login Logout)-2
+React_hooks -1
+React-GraphQL-1
+HOC
+Basic React Native=1
+React-Redux =1
+React-Redux =1
+///////Walkthrough///////
+React-Saga -1
+Testing Jest Enzime
+--------NOT Backend--------------
+API
+GraphQL
+Login/Logout
+
+
+https://medium.com/techmagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d
+
+React is a front-end lib/framework which help to build 
+single page applications using components based structure
+
+open source
+
+npm > node package manager
+
+////////////////////////////////////////////////////////////////
+JSON > JavaScript Object Notation
+[
+    {
+        "name":"John",
+        "class":"Ui"
+    },
+    {
+        "name":"Kevin",
+        "class":"Node"
+    }
+]
+
+//////////
+package.json
+> entry point to application
+> containes all the packages
+> script (start,build,test)
+> metadata(name,version,description)
+
+//////////
+Step to generate package.json
+**NodeJS must be install in system
+> go inside the folder using cmd/terminal
+> npm init
+> answer all questions
+> type "yes"
+
+//////////
+Step to install package.
+> go inside the folder using cmd/terminal
+> npm i packagename/npm i packagename@3.2.9
+
+//////////
+Step to generate react application
+> go inside the folder using cmd/terminal
+> npx create-react-app appname
+
+//////////
+Step to run react application
+> go inside the react app folder using cmd/terminal
+> npm start
