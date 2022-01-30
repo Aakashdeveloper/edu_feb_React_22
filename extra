@@ -92,7 +92,77 @@ Step to generate react application
 > go inside the folder using cmd/terminal
 > npx create-react-app appname
 
+#window
+// One Time
+> open cmd as administrator
+> npm i -g create-react-app
+
+// next all time you need new app
+> go inside the folder using cmd/terminal
+> create-react-app appname
+
+//mac/linux
+// One Time
+> open terminal
+> sudo npm i -g create-react-app
+
+// next all time you need new app
+> go inside the folder using terminal
+> create-react-app appname
+
 //////////
 Step to run react application
 > go inside the react app folder using cmd/terminal
 > npm start
+
+//es5
+ECMA Script 5
+//es6
+ECMA Script 6
+
+function add(a,b){
+    return a+b
+}
+
+const add = (a,b) => {
+    return a+b
+}
+
+add(1,2)
+
+
+function add(a,b){
+    var out = [a,b]
+    return a,b
+}
+
+add(1,2)
+
+functional
+> dumb components
+> use for display purposes
+> we cannot maintain state
+
+classcomponent
+> logical components
+> use for calling api/logics as well as display
+> we can maintain state
+
+hookscomponent
+
+
+state
+> state act like a local variable
+> every component can have its own state
+> value of state can be updated
+> any data interaction will happen through state Only
+
+props
+> props help to transfer the data
+> value of props cannot be updated
+> we can only transfer data between 2 nested component
+
+////JavaScript////
+>map
+>filter
+>indexof
