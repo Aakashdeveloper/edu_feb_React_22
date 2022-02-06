@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Outlet} from 'react-router-dom';
+import Footer from './Footer'
 
 const Header = () => {
     return (
@@ -16,7 +17,7 @@ const Header = () => {
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav">
-                            <li> <Link to="/">Home</Link></li>
+                            <li> <Link to="/home">Home</Link></li>
                             <li> <Link to="/post">Post</Link></li>
                             <li><Link to="/profile">Profile</Link></li>
                         </ul>
@@ -24,6 +25,8 @@ const Header = () => {
                 </div>
             </nav>
             <hr/>
+            <Outlet/>
+            <Footer/>
         </>
     )
 }
