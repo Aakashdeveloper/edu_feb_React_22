@@ -29,11 +29,13 @@ Deployment
 -> Aws
 -> Docker
 -> Nginx
-React-JWT(Login Logout)-2
+
+
 React_hooks -1
 React-GraphQL-1
 HOC
 Basic React Native=1
+
 React-Redux =1
 React-Redux =1
 ///////Walkthrough///////
@@ -279,3 +281,53 @@ var a = `Ankit`
 (post)placeOrder >   
 
 npm i react-router-dom@5.3.0 axios react-tabs
+
+var a = [56,34,89,23,12,4,78]
+undefined
+a.indexOf(12)
+4
+a.splice(3,2)
+(2) [23, 12]
+a
+(5) [56, 34, 89, 4, 78]
+a.splice(0,1)
+[56]
+
+var a = [56,34,89,23,12,4,78]
+undefined
+a.splice(a.indexOf(12),1)
+[12]
+a
+(6) [56, 34, 89, 23, 4, 78]
+a.splice(a.indexOf(4),1)
+[4]
+a
+(5) [56, 34, 89, 23, 78]
+
+
+var a = [56,34,89,23,12,4,78,34]
+undefined
+a.splice(a.indexOf(34),1)
+[34]
+var a = [56,34,89,23,12,4,78,34]
+undefined
+a.splice(a.indexOf(34),1)
+[34]
+a
+(7) [56, 89, 23, 12, 4, 78, 34]
+a.splice(a.indexOf(34),1)
+[34]
+a
+(6) [56, 89, 23, 12, 4, 78]
+a.splice(a.indexOf(34),1)
+[78]
+a
+(5) [56, 89, 23, 12, 4]
+a.splice(a.indexOf(34),1)
+[4]
+a.indexOf(34)
+-1
+
+
+sessionStorage
+child => parent
