@@ -15,9 +15,21 @@ class Details extends Component {
 
         this.state={
             details:'',
-            menuList:''
+            menuList:'',
+            userItem:"",
+            pageId:sessionStorage.getItem('pageId')?sessionStorage.getItem('pageId'):1
         }
     }
+
+    addToCart = (data) => {
+        this.setState({userItem:data})
+    }
+
+    proceed =() => {
+        sessionStorage.setItem('menuId', this.state.userItem)
+        this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+    }   
+
     render(){
         //let details = this.state.details
         let {details} = this.state
@@ -65,15 +77,17 @@ class Details extends Component {
                                         <p>Contact Us: {details.contact_number}</p>
                                     </TabPanel>
                                 </Tabs>
-                                <Link to={`/`} className="btn btn-danger">Back</Link> &nbsp;
-                                <button className="btn btn-success">Proceed</button>
+                                <Link to={`/listing/${this.state.pageId}`} className="btn btn-danger">Back</Link> &nbsp;
+                                <button className="btn btn-success"
+                                onClick={this.proceed}>Proceed</button>
                             </div>
                         </div>
                     </div>
 
                     <div className="col-md-12">
                         <center><h2>Menu</h2></center>
-                        <MenuDisplay menudata={this.state.menuList}/>
+                        <MenuDisplay menudata={this.state.menuList} 
+                        finalOrder={(data) => {this.addToCart(data)}}/>
                     </div>
                     
                 </div>

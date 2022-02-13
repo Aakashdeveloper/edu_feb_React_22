@@ -21,6 +21,7 @@ Npm
 React = 3
 Mock API
 json-server
+//////////////////
 Github
 Deployment
 -> MERN
@@ -29,8 +30,6 @@ Deployment
 -> Aws
 -> Docker
 -> Nginx
-
-
 React_hooks -1
 React-GraphQL-1
 HOC
@@ -331,3 +330,6 @@ a.indexOf(34)
 
 sessionStorage
 child => parent
+
+>>>>>
+npx json-server --watch order.json --port 9870

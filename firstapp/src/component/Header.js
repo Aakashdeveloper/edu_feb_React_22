@@ -15,7 +15,7 @@ class Header extends Component {
         // console.log(event.target.value)
         this.setState({keyword:event.target.value?event.target.value:"User Input Here"})
         // passing the data to parent
-        this.props.userText(event.target.value)
+        this.props.userText(event.target.value,test)
     }
 
     render(){

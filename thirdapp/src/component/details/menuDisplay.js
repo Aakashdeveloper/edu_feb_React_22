@@ -6,13 +6,14 @@ class MenuDisplay extends Component {
     placeOrder = (id) => {
         this.orderId.push(id)
         console.log(this.orderId)
+        this.props.finalOrder(this.orderId)
     }
 
     removeOrder = (id) => {
         if(this.orderId.indexOf(id)> -1){
             this.orderId.splice(this.orderId.indexOf(id),1)
+            this.props.finalOrder(this.orderId)
         }
-        console.log(this.orderId)
     }
     
 
