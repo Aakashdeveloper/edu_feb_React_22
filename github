@@ -1,0 +1,25 @@
+//first time from new folder
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/testreact.git
+git push -u origin master
+
+
+// next time from same folder
+git add .
+git commit -m "first commit"
+git push
+
+///clone
+git clone https://github.com/Aakashdeveloper/testreact
+
+//branch
+git branch
+
+git checkout -b homepage
+
+git add .
+git commit -m "A"
+git push -u origin homepage

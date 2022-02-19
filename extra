@@ -21,7 +21,6 @@ Npm
 React = 3
 Mock API
 json-server
-//////////////////
 Github
 Deployment
 -> MERN
@@ -31,6 +30,7 @@ Deployment
 -> Docker
 -> Nginx
 React_hooks -1
+/////////////////
 React-GraphQL-1
 HOC
 Basic React Native=1
@@ -335,3 +335,13 @@ child => parent
 npx json-server --watch order.json --port 9870
 
 https://www.youtube.com/c/DeveloperFunnel/videos
+
+
+//////Make Build///////
+npm run build
+
+// Docker image
+docker built . -t "imagename"
+
+// spin container- run image
+docker run -p 3000:9800 imagename

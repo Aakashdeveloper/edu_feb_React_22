@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.1a031397.css","mappings":"AAAA,OACI,qBACJ,CACA,MACI,UAAW,CAEX,cAAa,CADb,iBAEJ","sources":["component/Header.css"],"sourcesContent":["header{\n    background-color:teal\n}\n.logo{\n    color:white;\n    text-align:center;\n    font-size:30px\n}"],"names":[],"sourceRoot":""}
