@@ -1,17 +1,12 @@
 import React,{useState,useEffect} from 'react';
 import DisplayComponent from './displayComponent'
-const lurl = "https://zomatoajulypi.herokuapp.com/location";
-
+const lurl = "http://zomatoajulypi.herokuapp.com/restaurant";
+import { Text,View, StyleSheet,Alert,Button } from "react-native";
 
 function HookComponent(props){
     const [title] = useState('React App');
     const [count,setCount] = useState(0);
-    const [count1,setCount1] = useState(0);
     const [city,setCity] = useState();
-
-    const updateCount = () => {
-        setCount(count+1);
-    }
 
     useEffect(() =>{
         fetch(lurl)
@@ -23,14 +18,19 @@ function HookComponent(props){
 
 
     return(
-        <>
-            <h1>{title}</h1>
-            <h2>{count}</h2>
-            <button onClick={updateCount}>Counter</button>
-            <h2>{count1}</h2>
-            <button onClick={()=>{setCount1(count1+1)}}>Counter</button>
+        <View>
+            <Text>{title}</Text>
+            <Text>{count}</Text>
+            <Button
+                    title="Press me"
+                    onPress={() => Alert.alert('Simple Button pressed')}
+            />
+            <Button
+                    title="Press me"
+                    onPress={() => {setCount(count+1)}}
+            />
             <DisplayComponent myCity={city} />
-        </>
+        </View>
     )
 }
 

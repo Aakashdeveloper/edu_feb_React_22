@@ -30,10 +30,11 @@ Deployment
 -> Docker
 -> Nginx
 React_hooks -1
-/////////////////
 React-GraphQL-1
 HOC
 Basic React Native=1
+/////////////////
+
 
 React-Redux =1
 React-Redux =1
@@ -345,3 +346,14 @@ docker built . -t "imagename"
 
 // spin container- run image
 docker run -p 3000:9800 imagename
+
+npm i graphql-tag apollo-boost apollo-graphql react-apollo@3.1.5
+
+HOC
+> High order component
+i take component and data as parameter and return component with data
+
+https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutorial
+
+//// generate react native app  //////
+npx create-react-native-app appname
