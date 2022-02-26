@@ -33,14 +33,12 @@ React_hooks -1
 React-GraphQL-1
 HOC
 Basic React Native=1
-/////////////////
-
-
 React-Redux =1
 React-Redux =1
+Testing Jest Enzime
 ///////Walkthrough///////
 React-Saga -1
-Testing Jest Enzime
+
 --------NOT Backend--------------
 API
 GraphQL
@@ -357,3 +355,6 @@ https://www.codingame.com/playgrounds/8595/reactjs-higher-order-components-tutor
 
 //// generate react native app  //////
 npx create-react-native-app appname
+
+
+npm i redux react-redux
