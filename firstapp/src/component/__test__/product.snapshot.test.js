@@ -32,4 +32,9 @@ describe('Snapshot Product test',() => {
         let tree = create(<Product dispData={data} />);
         expect(tree.toJSON()).toMatchSnapshot()
     })
+    test('Testing Product',() => {
+        let tree = create(<Product/>);
+        expect(tree.toJSON()).toMatchSnapshot()
+    })
 })
+

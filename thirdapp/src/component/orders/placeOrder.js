@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './placeOrder.css';
+import Header from '../../Header';
 
 const url = "http://zomatoajulypi.herokuapp.com/menuItem";
 const orderUrl = "http://localhost:9870/orders"
@@ -11,10 +12,10 @@ class PlaceOrder extends Component{
         this.state={
             id:Math.floor(Math.random()*100000),
             hotel_name:this.props.match.params.restName,
-            name:'',
-            phone:'',
-            email:'',
-            address:'',
+            name:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[0]:'',
+            phone:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[2]:'',
+            email:sessionStorage.getItem('userData')?sessionStorage.getItem('userData').split(',')[1]:'',
+            address:'Hno21',
             cost:0,
             menuItem:''
 
@@ -37,7 +38,8 @@ class PlaceOrder extends Component{
             },
             body:JSON.stringify(obj)
         })
-        .then(this.props.history.push('/viewOrder'))
+        //.then(this.props.history.push('/viewOrder'))
+        .then(console.log("Order Added"))
 
     }
 
@@ -57,6 +59,8 @@ class PlaceOrder extends Component{
 
     render(){
         return(
+            <>
+            <Header/>
             <div className="container">
                 <br/>
                 <div className="panel panel-primary">
@@ -64,6 +68,11 @@ class PlaceOrder extends Component{
                         <h3>Your Order for Restaurants {this.state.hotel_name}</h3>
                     </div>
                     <div className="panel-body">
+                        <form action="https://developerpayment.herokuapp.com/paynow" method="POST">
+                        <input type="hidden" name="cost" value={this.state.cost}/>
+                        <input type="hidden" name="id" value={this.state.id}/>
+                        <input type="hidden" name="hotel_name" value={this.state.hotel_name}/>
+                        
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="col-md-6">
@@ -94,16 +103,18 @@ class PlaceOrder extends Component{
                                 <h2>Total Cost is Rs.{this.state.cost}</h2>
                             </div>
                             <div className="col-md-12">
-                                <button className="btn btn-success" onClick={this.handleSubmit}>
+                                <button className="btn btn-success" onClick={this.handleSubmit}
+                                type="submit">
                                     CheckOut
                                 </button>
                             </div>
                         </div>
-
+                        </form>
                     </div>
                 </div>
 
             </div>
+            </>
         )
     }
 

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import MenuDisplay from './menuDisplay';
+import Header from '../../Header';
 
 const url = "http://zomatoajulypi.herokuapp.com/details"
 const menuUrl = "https://zomatoajulypi.herokuapp.com/menu"
@@ -35,6 +36,7 @@ class Details extends Component {
         let {details} = this.state
         return(
             <>
+            <Header/>
             <div className="main">
                     <div className="tileImage">
                         <div className="imageClass">
